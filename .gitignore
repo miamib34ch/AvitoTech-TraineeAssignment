@@ -100,7 +100,6 @@ iOSInjectionProject/
 ### SwiftPackageManager ###
 Packages
 xcuserdata
-*.xcodeproj
 
 
 ### Xcode ###
@@ -109,7 +108,6 @@ xcuserdata
 
 ### Xcode Patch ###
 *.xcodeproj/*
-!*.xcodeproj/project.pbxproj
 !*.xcodeproj/xcshareddata/
 !*.xcodeproj/project.xcworkspace/
 !*.xcworkspace/contents.xcworkspacedata
@@ -117,6 +115,3 @@ xcuserdata
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode,swift,cocoapods,swiftpackagemanager
-FakeNFT/Epics/Basket
-FakeNFT/Epics/Catalog
-FakeNFT/Epics/Statistic
