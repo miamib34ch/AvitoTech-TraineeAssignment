@@ -14,6 +14,16 @@
 		8B1C9ACC2A9A7D0C00127D1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C9ACA2A9A7D0C00127D1F /* LaunchScreen.storyboard */; };
 		8B1C9ADB2A9A83BF00127D1F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B1C9ADD2A9A83BF00127D1F /* Localizable.strings */; };
 		8B1C9AE02A9A83E700127D1F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1C9ADF2A9A83E700127D1F /* Fonts.swift */; };
+		8BC118A82A9CB4CC00ABE6C9 /* CatalogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC118A72A9CB4CC00ABE6C9 /* CatalogModel.swift */; };
+		8BC118AA2A9CB71200ABE6C9 /* CatalogsObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC118A92A9CB71200ABE6C9 /* CatalogsObjectModel.swift */; };
+		8BC118AC2A9CBFD200ABE6C9 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC118AB2A9CBFD200ABE6C9 /* NetworkRequest.swift */; };
+		8BC118AE2A9CC04300ABE6C9 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC118AD2A9CC04300ABE6C9 /* NetworkClient.swift */; };
+		8BC118B02A9CC24E00ABE6C9 /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC118AF2A9CC24E00ABE6C9 /* NetworkTask.swift */; };
+		8BC118B52A9CF71C00ABE6C9 /* CatalogRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC118B42A9CF71C00ABE6C9 /* CatalogRequest.swift */; };
+		8BC118B72A9CF7A000ABE6C9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC118B62A9CF7A000ABE6C9 /* Constants.swift */; };
+		8BC118B92A9CF8EA00ABE6C9 /* CatalogNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC118B82A9CF8EA00ABE6C9 /* CatalogNetworkService.swift */; };
+		8BC118BD2A9D048000ABE6C9 /* CatalogsObjectRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC118BC2A9D048000ABE6C9 /* CatalogsObjectRequest.swift */; };
+		8BC118BF2A9D06CF00ABE6C9 /* CatalogsObjectNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC118BE2A9D06CF00ABE6C9 /* CatalogsObjectNetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +38,16 @@
 		8B1C9ADC2A9A83BF00127D1F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8B1C9ADE2A9A83C200127D1F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8B1C9ADF2A9A83E700127D1F /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		8BC118A72A9CB4CC00ABE6C9 /* CatalogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogModel.swift; sourceTree = "<group>"; };
+		8BC118A92A9CB71200ABE6C9 /* CatalogsObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogsObjectModel.swift; sourceTree = "<group>"; };
+		8BC118AB2A9CBFD200ABE6C9 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		8BC118AD2A9CC04300ABE6C9 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		8BC118AF2A9CC24E00ABE6C9 /* NetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
+		8BC118B42A9CF71C00ABE6C9 /* CatalogRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRequest.swift; sourceTree = "<group>"; };
+		8BC118B62A9CF7A000ABE6C9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8BC118B82A9CF8EA00ABE6C9 /* CatalogNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogNetworkService.swift; sourceTree = "<group>"; };
+		8BC118BC2A9D048000ABE6C9 /* CatalogsObjectRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogsObjectRequest.swift; sourceTree = "<group>"; };
+		8BC118BE2A9D06CF00ABE6C9 /* CatalogsObjectNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogsObjectNetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +81,12 @@
 			isa = PBXGroup;
 			children = (
 				8B1C9AD82A9A834500127D1F /* Resources */,
+				8BC118A52A9CB3E300ABE6C9 /* Network */,
+				8BC118A62A9CB4B900ABE6C9 /* Models */,
 				8B1C9ACA2A9A7D0C00127D1F /* LaunchScreen.storyboard */,
 				8B1C9ABF2A9A7D0B00127D1F /* AppDelegate.swift */,
 				8B1C9AC12A9A7D0B00127D1F /* SceneDelegate.swift */,
+				8BC118B62A9CF7A000ABE6C9 /* Constants.swift */,
 				8B1C9AC32A9A7D0B00127D1F /* CatalogViewController.swift */,
 				8B1C9ACD2A9A7D0C00127D1F /* Info.plist */,
 			);
@@ -78,6 +101,53 @@
 				8B1C9ADF2A9A83E700127D1F /* Fonts.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		8BC118A52A9CB3E300ABE6C9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8BC118B12A9CF69B00ABE6C9 /* DefaultNetworkClient */,
+				8BC118B22A9CF6B700ABE6C9 /* CatalogNetworkService */,
+				8BC118B32A9CF6C700ABE6C9 /* CatalogsObjectNetworkService */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8BC118A62A9CB4B900ABE6C9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8BC118A72A9CB4CC00ABE6C9 /* CatalogModel.swift */,
+				8BC118A92A9CB71200ABE6C9 /* CatalogsObjectModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8BC118B12A9CF69B00ABE6C9 /* DefaultNetworkClient */ = {
+			isa = PBXGroup;
+			children = (
+				8BC118AF2A9CC24E00ABE6C9 /* NetworkTask.swift */,
+				8BC118AD2A9CC04300ABE6C9 /* NetworkClient.swift */,
+				8BC118AB2A9CBFD200ABE6C9 /* NetworkRequest.swift */,
+			);
+			path = DefaultNetworkClient;
+			sourceTree = "<group>";
+		};
+		8BC118B22A9CF6B700ABE6C9 /* CatalogNetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				8BC118B82A9CF8EA00ABE6C9 /* CatalogNetworkService.swift */,
+				8BC118B42A9CF71C00ABE6C9 /* CatalogRequest.swift */,
+			);
+			path = CatalogNetworkService;
+			sourceTree = "<group>";
+		};
+		8BC118B32A9CF6C700ABE6C9 /* CatalogsObjectNetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				8BC118BE2A9D06CF00ABE6C9 /* CatalogsObjectNetworkService.swift */,
+				8BC118BC2A9D048000ABE6C9 /* CatalogsObjectRequest.swift */,
+			);
+			path = CatalogsObjectNetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,10 +243,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BC118AC2A9CBFD200ABE6C9 /* NetworkRequest.swift in Sources */,
+				8BC118B72A9CF7A000ABE6C9 /* Constants.swift in Sources */,
+				8BC118BD2A9D048000ABE6C9 /* CatalogsObjectRequest.swift in Sources */,
+				8BC118AA2A9CB71200ABE6C9 /* CatalogsObjectModel.swift in Sources */,
 				8B1C9AE02A9A83E700127D1F /* Fonts.swift in Sources */,
 				8B1C9AC42A9A7D0B00127D1F /* CatalogViewController.swift in Sources */,
+				8BC118B02A9CC24E00ABE6C9 /* NetworkTask.swift in Sources */,
+				8BC118BF2A9D06CF00ABE6C9 /* CatalogsObjectNetworkService.swift in Sources */,
 				8B1C9AC02A9A7D0B00127D1F /* AppDelegate.swift in Sources */,
 				8B1C9AC22A9A7D0B00127D1F /* SceneDelegate.swift in Sources */,
+				8BC118B92A9CF8EA00ABE6C9 /* CatalogNetworkService.swift in Sources */,
+				8BC118B52A9CF71C00ABE6C9 /* CatalogRequest.swift in Sources */,
+				8BC118A82A9CB4CC00ABE6C9 /* CatalogModel.swift in Sources */,
+				8BC118AE2A9CC04300ABE6C9 /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
