@@ -28,17 +28,17 @@ struct CatalogsObjectModel: Codable {
 }
 
 /*
- Пример:
- {
-    "id": "1",
-    "title": "Смартфон Apple iPhone 12",
-    "price": "55000 ₽",
-    "location": "Москва",
-    "image_url": "https://www.avito.st/s/interns-ios/images/1.png",
-    "created_date": "2023-08-16",
-    "description": "Отличное состояние, последняя модель iPhone.",
-    "email": "example1@example.com",
-    "phone_number": "+7 (123) 456-7890",
-    "address": "ул. Пушкина, д. 1"
- }
- */
+Пример:
+{
+"id": "1",
+"title": "Смартфон Apple iPhone 12",
+"price": "55000 ₽",
+"location": "Москва",
+"image_url": "https://www.avito.st/s/interns-ios/images/1.png",
+"created_date": "2023-08-16",
+"description": "Отличное состояние, последняя модель iPhone.",
+"email": "example1@example.com",
+"phone_number": "+7 (123) 456-7890",
+"address": "ул. Пушкина, д. 1"
+}
+*/
