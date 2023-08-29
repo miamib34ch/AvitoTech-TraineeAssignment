@@ -24,6 +24,8 @@
 		8BC118B92A9CF8EA00ABE6C9 /* CatalogNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC118B82A9CF8EA00ABE6C9 /* CatalogNetworkService.swift */; };
 		8BC118BD2A9D048000ABE6C9 /* CatalogsObjectRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC118BC2A9D048000ABE6C9 /* CatalogsObjectRequest.swift */; };
 		8BC118BF2A9D06CF00ABE6C9 /* CatalogsObjectNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC118BE2A9D06CF00ABE6C9 /* CatalogsObjectNetworkService.swift */; };
+		8BC141282A9E6EBD000E26F3 /* CellsReusingUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC141272A9E6EBD000E26F3 /* CellsReusingUtils.swift */; };
+		8BC1412A2A9E6F4E000E26F3 /* CatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC141292A9E6F4E000E26F3 /* CatalogCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		8BC118B82A9CF8EA00ABE6C9 /* CatalogNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogNetworkService.swift; sourceTree = "<group>"; };
 		8BC118BC2A9D048000ABE6C9 /* CatalogsObjectRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogsObjectRequest.swift; sourceTree = "<group>"; };
 		8BC118BE2A9D06CF00ABE6C9 /* CatalogsObjectNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogsObjectNetworkService.swift; sourceTree = "<group>"; };
+		8BC141272A9E6EBD000E26F3 /* CellsReusingUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsReusingUtils.swift; sourceTree = "<group>"; };
+		8BC141292A9E6F4E000E26F3 /* CatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,14 +84,14 @@
 		8B1C9ABE2A9A7D0B00127D1F /* AvitoTech-TraineeAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				8BC141262A9E6EAA000E26F3 /* Helpers */,
 				8B1C9AD82A9A834500127D1F /* Resources */,
 				8BC118A52A9CB3E300ABE6C9 /* Network */,
 				8BC118A62A9CB4B900ABE6C9 /* Models */,
-				8B1C9ACA2A9A7D0C00127D1F /* LaunchScreen.storyboard */,
+				8BC141242A9E6ABB000E26F3 /* Screens */,
 				8B1C9ABF2A9A7D0B00127D1F /* AppDelegate.swift */,
 				8B1C9AC12A9A7D0B00127D1F /* SceneDelegate.swift */,
 				8BC118B62A9CF7A000ABE6C9 /* Constants.swift */,
-				8B1C9AC32A9A7D0B00127D1F /* CatalogViewController.swift */,
 				8B1C9ACD2A9A7D0C00127D1F /* Info.plist */,
 			);
 			path = "AvitoTech-TraineeAssignment";
@@ -148,6 +152,32 @@
 				8BC118BC2A9D048000ABE6C9 /* CatalogsObjectRequest.swift */,
 			);
 			path = CatalogsObjectNetworkService;
+			sourceTree = "<group>";
+		};
+		8BC141242A9E6ABB000E26F3 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8B1C9ACA2A9A7D0C00127D1F /* LaunchScreen.storyboard */,
+				8BC141252A9E6AD5000E26F3 /* Catalog */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8BC141252A9E6AD5000E26F3 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				8B1C9AC32A9A7D0B00127D1F /* CatalogViewController.swift */,
+				8BC141292A9E6F4E000E26F3 /* CatalogCell.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		8BC141262A9E6EAA000E26F3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8BC141272A9E6EBD000E26F3 /* CellsReusingUtils.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,7 +278,9 @@
 				8BC118BD2A9D048000ABE6C9 /* CatalogsObjectRequest.swift in Sources */,
 				8BC118AA2A9CB71200ABE6C9 /* CatalogsObjectModel.swift in Sources */,
 				8B1C9AE02A9A83E700127D1F /* Fonts.swift in Sources */,
+				8BC141282A9E6EBD000E26F3 /* CellsReusingUtils.swift in Sources */,
 				8B1C9AC42A9A7D0B00127D1F /* CatalogViewController.swift in Sources */,
+				8BC1412A2A9E6F4E000E26F3 /* CatalogCell.swift in Sources */,
 				8BC118B02A9CC24E00ABE6C9 /* NetworkTask.swift in Sources */,
 				8BC118BF2A9D06CF00ABE6C9 /* CatalogsObjectNetworkService.swift in Sources */,
 				8B1C9AC02A9A7D0B00127D1F /* AppDelegate.swift in Sources */,
