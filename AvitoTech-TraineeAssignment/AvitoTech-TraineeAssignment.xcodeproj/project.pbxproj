@@ -33,6 +33,8 @@
 		8BC141342A9F8943000E26F3 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC141332A9F8943000E26F3 /* String+Extension.swift */; };
 		8BC692EE2A9FB9990096C00B /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC692ED2A9FB9990096C00B /* Images.swift */; };
 		8BC692F02A9FBE580096C00B /* SwipeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC692EF2A9FBE580096C00B /* SwipeNavigationController.swift */; };
+		8BC692F22A9FD3850096C00B /* CatalogViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC692F12A9FD3850096C00B /* CatalogViewPresenter.swift */; };
+		8BC692F42A9FD48D0096C00B /* CatalogViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC692F32A9FD48D0096C00B /* CatalogViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		8BC141332A9F8943000E26F3 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		8BC692ED2A9FB9990096C00B /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		8BC692EF2A9FBE580096C00B /* SwipeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeNavigationController.swift; sourceTree = "<group>"; };
+		8BC692F12A9FD3850096C00B /* CatalogViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewPresenter.swift; sourceTree = "<group>"; };
+		8BC692F32A9FD48D0096C00B /* CatalogViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,7 +193,9 @@
 		8BC141252A9E6AD5000E26F3 /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
+				8BC692F32A9FD48D0096C00B /* CatalogViewProtocol.swift */,
 				8B1C9AC32A9A7D0B00127D1F /* CatalogViewController.swift */,
+				8BC692F12A9FD3850096C00B /* CatalogViewPresenter.swift */,
 				8BC141292A9E6F4E000E26F3 /* CatalogCell.swift */,
 			);
 			path = Catalog;
@@ -321,11 +327,13 @@
 				8BC118BF2A9D06CF00ABE6C9 /* CatalogsObjectNetworkService.swift in Sources */,
 				8BC141342A9F8943000E26F3 /* String+Extension.swift in Sources */,
 				8B1C9AC02A9A7D0B00127D1F /* AppDelegate.swift in Sources */,
+				8BC692F42A9FD48D0096C00B /* CatalogViewProtocol.swift in Sources */,
 				8B1C9AC22A9A7D0B00127D1F /* SceneDelegate.swift in Sources */,
 				8BC118B92A9CF8EA00ABE6C9 /* CatalogNetworkService.swift in Sources */,
 				8BC118B52A9CF71C00ABE6C9 /* CatalogRequest.swift in Sources */,
 				8BC118A82A9CB4CC00ABE6C9 /* CatalogModel.swift in Sources */,
 				8BC692EE2A9FB9990096C00B /* Images.swift in Sources */,
+				8BC692F22A9FD3850096C00B /* CatalogViewPresenter.swift in Sources */,
 				8BC118AE2A9CC04300ABE6C9 /* NetworkClient.swift in Sources */,
 				8BC141322A9F7C72000E26F3 /* UIBlockingProgressHUD.swift in Sources */,
 			);
