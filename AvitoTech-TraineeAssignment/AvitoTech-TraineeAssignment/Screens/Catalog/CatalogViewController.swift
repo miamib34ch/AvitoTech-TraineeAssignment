@@ -7,13 +7,20 @@
 
 import UIKit
 
-class CatalogViewController: UIViewController {
+final class CatalogViewController: UIViewController, CatalogViewControllerProtocol {
+    private var presenter: CatalogViewPresenterProtocol
+
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     private let refreshControl = UIRefreshControl()
 
-    private let catalogNetworkService = CatalogNetworkService.shared
-    private var catalogNetworkServiceObserverData: NSObjectProtocol?
-    private var catalogNetworkServiceObserverError: NSObjectProtocol?
+    init(presenter: CatalogViewPresenterProtocol) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,23 +29,32 @@ class CatalogViewController: UIViewController {
         configureCollection()
         configureRefreshControl()
 
-        catalogNetworkServiceObserverData = NotificationCenter.default
-            .addObserver(
-                forName: CatalogNetworkService.dataReceivedNotification,
-                object: nil,
-                queue: .main
-            ) { [weak self] _ in
-                self?.updateCollection()
-            }
-        catalogNetworkServiceObserverError = NotificationCenter.default
-            .addObserver(
-                forName: CatalogNetworkService.errorNotification,
-                object: nil,
-                queue: .main
-            ) { [weak self] _ in
-                self?.showAlert()
-            }
-        loadData()
+        presenter.viewDidLoad()
+    }
+
+    func updateCollection() {
+        collectionView.reloadData()
+    }
+
+    func showAlert(alert: UIAlertController) {
+        present(alert, animated: true)
+    }
+
+    func showHud() {
+        UIBlockingProgressHUD.show()
+    }
+
+    func removeHud() {
+        UIBlockingProgressHUD.dismiss()
+    }
+
+    func configureCell(cell: CatalogCell, with model: Advertisement) {
+        cell.id = model.id
+        cell.setImage(link: URL(string: model.imageURL))
+        cell.setNameLabel(name: model.title)
+        cell.setCostLabel(cost: model.price)
+        cell.adressLabel(adress: model.location)
+        cell.dateLabel(date: model.createdDate)
     }
 
     private func configureCollection() {
@@ -65,31 +81,9 @@ class CatalogViewController: UIViewController {
         refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
     }
 
-    private func updateCollection() {
-        UIBlockingProgressHUD.dismiss()
-        collectionView.reloadData()
-    }
-
-    private func showAlert() {
-        UIBlockingProgressHUD.dismiss()
-        let alertTitle = NSLocalizedString("alert.title", comment: "Название алерта")
-        let alertMessage = NSLocalizedString("alert.message", comment: "Сообщение в алерте")
-        let alertActionTitle = NSLocalizedString("alert.action.again", comment: "Название действия повторения в алерте")
-        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: alertActionTitle, style: .default) { [weak self] _ in
-            self?.loadData()
-        })
-        present(alert, animated: true)
-    }
-
-    private func loadData() {
-        UIBlockingProgressHUD.show()
-        catalogNetworkService.fetch()
-    }
-
     @objc private func pullToRefresh() {
         refreshControl.endRefreshing()
-        loadData()
+        presenter.viewDidPullToRefresh()
     }
 }
 
@@ -115,18 +109,12 @@ extension CatalogViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        catalogNetworkService.catalogModel?.advertisements.count ?? 0
+        presenter.numberOfAdvertisement
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: CatalogCell = collectionView.dequeueReusableCell(indexPath: indexPath)
-        guard let model = catalogNetworkService.catalogModel?.advertisements[indexPath.row] else { return cell }
-        cell.id = model.id
-        cell.setImage(link: URL(string: model.imageURL))
-        cell.setNameLabel(name: model.title)
-        cell.setCostLabel(cost: model.price)
-        cell.adressLabel(adress: model.location)
-        cell.dateLabel(date: model.createdDate)
+        presenter.viewWillConfigureCell(cell: cell, with: indexPath)
         return cell
     }
 
