@@ -24,6 +24,12 @@
 		8BC118B92A9CF8EA00ABE6C9 /* CatalogNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC118B82A9CF8EA00ABE6C9 /* CatalogNetworkService.swift */; };
 		8BC118BD2A9D048000ABE6C9 /* CatalogsObjectRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC118BC2A9D048000ABE6C9 /* CatalogsObjectRequest.swift */; };
 		8BC118BF2A9D06CF00ABE6C9 /* CatalogsObjectNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC118BE2A9D06CF00ABE6C9 /* CatalogsObjectNetworkService.swift */; };
+		8BC141282A9E6EBD000E26F3 /* CellsReusingUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC141272A9E6EBD000E26F3 /* CellsReusingUtils.swift */; };
+		8BC1412A2A9E6F4E000E26F3 /* CatalogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC141292A9E6F4E000E26F3 /* CatalogCell.swift */; };
+		8BC1412D2A9F775C000E26F3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8BC1412C2A9F775C000E26F3 /* Kingfisher */; };
+		8BC141302A9F7C62000E26F3 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 8BC1412F2A9F7C62000E26F3 /* ProgressHUD */; };
+		8BC141322A9F7C72000E26F3 /* UIBlockingProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC141312A9F7C72000E26F3 /* UIBlockingProgressHUD.swift */; };
+		8BC141342A9F8943000E26F3 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC141332A9F8943000E26F3 /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +54,10 @@
 		8BC118B82A9CF8EA00ABE6C9 /* CatalogNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogNetworkService.swift; sourceTree = "<group>"; };
 		8BC118BC2A9D048000ABE6C9 /* CatalogsObjectRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogsObjectRequest.swift; sourceTree = "<group>"; };
 		8BC118BE2A9D06CF00ABE6C9 /* CatalogsObjectNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogsObjectNetworkService.swift; sourceTree = "<group>"; };
+		8BC141272A9E6EBD000E26F3 /* CellsReusingUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsReusingUtils.swift; sourceTree = "<group>"; };
+		8BC141292A9E6F4E000E26F3 /* CatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCell.swift; sourceTree = "<group>"; };
+		8BC141312A9F7C72000E26F3 /* UIBlockingProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBlockingProgressHUD.swift; sourceTree = "<group>"; };
+		8BC141332A9F8943000E26F3 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BC1412D2A9F775C000E26F3 /* Kingfisher in Frameworks */,
+				8BC141302A9F7C62000E26F3 /* ProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,14 +92,14 @@
 		8B1C9ABE2A9A7D0B00127D1F /* AvitoTech-TraineeAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				8BC141262A9E6EAA000E26F3 /* Helpers */,
 				8B1C9AD82A9A834500127D1F /* Resources */,
 				8BC118A52A9CB3E300ABE6C9 /* Network */,
 				8BC118A62A9CB4B900ABE6C9 /* Models */,
-				8B1C9ACA2A9A7D0C00127D1F /* LaunchScreen.storyboard */,
+				8BC141242A9E6ABB000E26F3 /* Screens */,
 				8B1C9ABF2A9A7D0B00127D1F /* AppDelegate.swift */,
 				8B1C9AC12A9A7D0B00127D1F /* SceneDelegate.swift */,
 				8BC118B62A9CF7A000ABE6C9 /* Constants.swift */,
-				8B1C9AC32A9A7D0B00127D1F /* CatalogViewController.swift */,
 				8B1C9ACD2A9A7D0C00127D1F /* Info.plist */,
 			);
 			path = "AvitoTech-TraineeAssignment";
@@ -150,6 +162,34 @@
 			path = CatalogsObjectNetworkService;
 			sourceTree = "<group>";
 		};
+		8BC141242A9E6ABB000E26F3 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8B1C9ACA2A9A7D0C00127D1F /* LaunchScreen.storyboard */,
+				8BC141252A9E6AD5000E26F3 /* Catalog */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8BC141252A9E6AD5000E26F3 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				8B1C9AC32A9A7D0B00127D1F /* CatalogViewController.swift */,
+				8BC141292A9E6F4E000E26F3 /* CatalogCell.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		8BC141262A9E6EAA000E26F3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8BC141272A9E6EBD000E26F3 /* CellsReusingUtils.swift */,
+				8BC141312A9F7C72000E26F3 /* UIBlockingProgressHUD.swift */,
+				8BC141332A9F8943000E26F3 /* String+Extension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,6 +207,10 @@
 			dependencies = (
 			);
 			name = "AvitoTech-TraineeAssignment";
+			packageProductDependencies = (
+				8BC1412C2A9F775C000E26F3 /* Kingfisher */,
+				8BC1412F2A9F7C62000E26F3 /* ProgressHUD */,
+			);
 			productName = "AvitoTech-TraineeAssignment";
 			productReference = 8B1C9ABC2A9A7D0B00127D1F /* AvitoTech-TraineeAssignment.app */;
 			productType = "com.apple.product-type.application";
@@ -195,6 +239,10 @@
 				en,
 			);
 			mainGroup = 8B1C9AB32A9A7D0B00127D1F;
+			packageReferences = (
+				8BC1412B2A9F775C000E26F3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				8BC1412E2A9F7C62000E26F3 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
+			);
 			productRefGroup = 8B1C9ABD2A9A7D0B00127D1F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -248,15 +296,19 @@
 				8BC118BD2A9D048000ABE6C9 /* CatalogsObjectRequest.swift in Sources */,
 				8BC118AA2A9CB71200ABE6C9 /* CatalogsObjectModel.swift in Sources */,
 				8B1C9AE02A9A83E700127D1F /* Fonts.swift in Sources */,
+				8BC141282A9E6EBD000E26F3 /* CellsReusingUtils.swift in Sources */,
 				8B1C9AC42A9A7D0B00127D1F /* CatalogViewController.swift in Sources */,
+				8BC1412A2A9E6F4E000E26F3 /* CatalogCell.swift in Sources */,
 				8BC118B02A9CC24E00ABE6C9 /* NetworkTask.swift in Sources */,
 				8BC118BF2A9D06CF00ABE6C9 /* CatalogsObjectNetworkService.swift in Sources */,
+				8BC141342A9F8943000E26F3 /* String+Extension.swift in Sources */,
 				8B1C9AC02A9A7D0B00127D1F /* AppDelegate.swift in Sources */,
 				8B1C9AC22A9A7D0B00127D1F /* SceneDelegate.swift in Sources */,
 				8BC118B92A9CF8EA00ABE6C9 /* CatalogNetworkService.swift in Sources */,
 				8BC118B52A9CF71C00ABE6C9 /* CatalogRequest.swift in Sources */,
 				8BC118A82A9CB4CC00ABE6C9 /* CatalogModel.swift in Sources */,
 				8BC118AE2A9CC04300ABE6C9 /* NetworkClient.swift in Sources */,
+				8BC141322A9F7C72000E26F3 /* UIBlockingProgressHUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +540,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8BC1412B2A9F775C000E26F3 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		8BC1412E2A9F7C62000E26F3 /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/relatedcode/ProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8BC1412C2A9F775C000E26F3 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BC1412B2A9F775C000E26F3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		8BC1412F2A9F7C62000E26F3 /* ProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BC1412E2A9F7C62000E26F3 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
+			productName = ProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8B1C9AB42A9A7D0B00127D1F /* Project object */;
 }

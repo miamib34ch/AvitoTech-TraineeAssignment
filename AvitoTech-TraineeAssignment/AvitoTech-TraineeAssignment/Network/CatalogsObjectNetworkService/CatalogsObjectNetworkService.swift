@@ -13,7 +13,6 @@ protocol CatalogsObjectNetworkServiceProtocol {
     static var errorNotification: NSNotification.Name { get }
     
     var catalogsObjectModel: CatalogsObjectModel? { get }
-    var error: Error? { get }
     
     func fetch(id: String)
 }
@@ -24,7 +23,6 @@ final class CatalogsObjectNetworkService: CatalogsObjectNetworkServiceProtocol {
     static let errorNotification = Notification.Name(rawValue: "CatalogsObjectNetworkServiceError")
     
     private(set) var catalogsObjectModel: CatalogsObjectModel?
-    private(set) var error: Error?
     
     private let defaultNetworkClient = DefaultNetworkClient()
     private var task: NetworkTask?
@@ -52,7 +50,7 @@ final class CatalogsObjectNetworkService: CatalogsObjectNetworkServiceProtocol {
             self.catalogsObjectModel = catalogsObjectModel
             NotificationCenter.default.post(name: CatalogsObjectNetworkService.dataReceivedNotification, object: self)
         case .failure(let error):
-            self.error = error
+            print(error)
             NotificationCenter.default.post(name: CatalogsObjectNetworkService.errorNotification, object: self)
         }
     }
