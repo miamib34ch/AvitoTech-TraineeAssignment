@@ -54,7 +54,7 @@ final class CatalogCell: UICollectionViewCell, ReuseIdentifying {
     }()
     private let dateLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.caption3
+        label.font = UIFont.caption2
         label.textColor = .gray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
