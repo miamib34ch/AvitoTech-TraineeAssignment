@@ -87,7 +87,7 @@ class CatalogViewController: UIViewController {
         catalogNetworkService.fetch()
     }
 
-    @objc func pullToRefresh() {
+    @objc private func pullToRefresh() {
         refreshControl.endRefreshing()
         loadData()
     }
@@ -131,6 +131,8 @@ extension CatalogViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // TODO: открываем экран детальный
+        guard let cell = collectionView.cellForItem(at: indexPath) as? CatalogCell,
+              let id = cell.id else { return }
+        navigationController?.pushViewController(CatalogsObjectViewController(objectId: id), animated: true)
     }
 }
