@@ -11,10 +11,15 @@ import MessageUI
 import CoreLocation
 
 final class CatalogsObjectViewPresenter: CatalogsObjectViewPresenterProtocol {
+    // MARK: - protocol's properties
+
     var adress: String {
         guard let model = catalogsObjectNetworkService.catalogsObjectModel else { return "" }
         return "г. " + model.location + ", " + model.address
     }
+
+
+    // MARK: - private properties
 
     weak private var viewController: CatalogsObjectViewControllerProtocol?
 
@@ -26,9 +31,15 @@ final class CatalogsObjectViewPresenter: CatalogsObjectViewPresenterProtocol {
     private var catalogsObjectNetworkServiceObserverData: NSObjectProtocol?
     private var catalogsObjectNetworkServiceObserverError: NSObjectProtocol?
 
+
+    // MARK: - class methods
+
     init(objectId: String) {
         self.objectId = objectId
     }
+
+
+    // MARK: - protocol's methods
 
     func injectViewController(viewController: CatalogsObjectViewControllerProtocol) {
         self.viewController = viewController
@@ -78,6 +89,9 @@ final class CatalogsObjectViewPresenter: CatalogsObjectViewPresenterProtocol {
             }
         }
     }
+
+
+    // MARK: - private methods
 
     private func loadData() {
         guard let objectId = objectId else { return }

@@ -8,10 +8,13 @@
 import UIKit
 
 final class CatalogViewController: UIViewController, CatalogViewControllerProtocol {
+    // MARK: - private properties
     private var presenter: CatalogViewPresenterProtocol
-
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     private let refreshControl = UIRefreshControl()
+
+
+    // MARK: - class methods
 
     init(presenter: CatalogViewPresenterProtocol) {
         self.presenter = presenter
@@ -31,6 +34,9 @@ final class CatalogViewController: UIViewController, CatalogViewControllerProtoc
 
         presenter.viewDidLoad()
     }
+
+
+    // MARK: - protocol's methods
 
     func updateCollection() {
         collectionView.reloadData()
@@ -61,6 +67,9 @@ final class CatalogViewController: UIViewController, CatalogViewControllerProtoc
         navigationController?.pushViewController(viewController, animated: true)
     }
 
+
+    // MARK: - private methods
+
     private func configureCollection() {
         collectionView.backgroundColor = .clear
         collectionView.refreshControl = refreshControl
@@ -85,11 +94,17 @@ final class CatalogViewController: UIViewController, CatalogViewControllerProtoc
         refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
     }
 
+
+    // MARK: - @objc methods
+
     @objc private func pullToRefresh() {
         refreshControl.endRefreshing()
         presenter.viewDidPullToRefresh()
     }
 }
+
+
+// MARK: - extension CatalogViewController + UICollectionViewDelegateFlowLayout
 
 extension CatalogViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -106,6 +121,9 @@ extension CatalogViewController: UICollectionViewDelegateFlowLayout {
         UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     }
 }
+
+
+// MARK: - extension CatalogViewController + UICollectionViewDataSource
 
 extension CatalogViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {

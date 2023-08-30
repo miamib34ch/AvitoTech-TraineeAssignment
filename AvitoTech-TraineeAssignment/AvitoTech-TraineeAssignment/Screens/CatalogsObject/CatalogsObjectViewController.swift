@@ -12,6 +12,9 @@ import MessageUI
 final class CatalogsObjectViewController: UIViewController, CatalogsObjectViewControllerProtocol {
     private var presenter: CatalogsObjectViewPresenterProtocol
 
+
+    // MARK: - ui properties
+
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -117,6 +120,9 @@ final class CatalogsObjectViewController: UIViewController, CatalogsObjectViewCo
         return map
     }()
 
+
+    // MARK: - class methods
+
     init(presenter: CatalogsObjectViewPresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -134,6 +140,9 @@ final class CatalogsObjectViewController: UIViewController, CatalogsObjectViewCo
 
         presenter.viewDidLoad()
     }
+
+
+    // MARK: - protocol's methods
 
     func showHud() {
         UIBlockingProgressHUD.show()
@@ -170,6 +179,9 @@ final class CatalogsObjectViewController: UIViewController, CatalogsObjectViewCo
         mapView.addAnnotation(annotation)
         mapView.setRegion(region, animated: true)
     }
+
+
+    // MARK: - private methods
 
     private func configureNavigationBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: .backArrow, style: .plain, target: self, action: #selector(backButtonTap))
@@ -242,6 +254,9 @@ final class CatalogsObjectViewController: UIViewController, CatalogsObjectViewCo
         adressLabel.text = adress
     }
 
+
+    // MARK: - @objc methods
+
     @objc func backButtonTap() {
         navigationController?.popViewController(animated: true)
     }
@@ -254,6 +269,9 @@ final class CatalogsObjectViewController: UIViewController, CatalogsObjectViewCo
         presenter.viewDidTapMailButton()
     }
 }
+
+
+// MARK: - extension CatalogsObjectViewController + MFMailComposeViewControllerDelegate
 
 extension CatalogsObjectViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {

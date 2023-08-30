@@ -8,14 +8,21 @@
 import UIKit
 
 final class CatalogViewPresenter: CatalogViewPresenterProtocol {
+    // MARK: - protocol's properties
     var numberOfAdvertisement: Int {
         catalogNetworkService.catalogModel?.advertisements.count ?? 0
     }
+
+
+    // MARK: - private properties
 
     weak private var viewController: CatalogViewControllerProtocol?
     private let catalogNetworkService = CatalogNetworkService.shared
     private var catalogNetworkServiceObserverData: NSObjectProtocol?
     private var catalogNetworkServiceObserverError: NSObjectProtocol?
+
+
+    // MARK: - protocol's methods
 
     func injectViewController(viewController: CatalogViewControllerProtocol) {
         self.viewController = viewController
@@ -56,6 +63,9 @@ final class CatalogViewPresenter: CatalogViewPresenterProtocol {
         catalogsObjectPresenter.injectViewController(viewController: catalogsObjectViewController)
         viewController?.showCatalogsObjectView(viewController: catalogsObjectViewController)
     }
+
+
+    // MARK: - private methods
 
     private func updateViewCollection() {
         viewController?.removeHud()

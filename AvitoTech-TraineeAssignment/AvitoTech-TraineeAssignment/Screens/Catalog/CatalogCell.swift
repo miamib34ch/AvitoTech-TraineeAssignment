@@ -9,8 +9,12 @@ import UIKit
 import Kingfisher
 
 final class CatalogCell: UICollectionViewCell, ReuseIdentifying {
+    // MARK: - iternal properties
     var id: String?
-    
+
+
+    // MARK: - private ui properties
+
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -60,6 +64,9 @@ final class CatalogCell: UICollectionViewCell, ReuseIdentifying {
         return label
     }()
 
+
+    // MARK: - class methods
+
     override func prepareForReuse() {
         super.prepareForReuse()
         id = nil
@@ -78,6 +85,9 @@ final class CatalogCell: UICollectionViewCell, ReuseIdentifying {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+
+    // MARK: - iternal methods
 
     func setImage(link: URL?) {
         imageView.kf.indicatorType = .activity
@@ -99,6 +109,9 @@ final class CatalogCell: UICollectionViewCell, ReuseIdentifying {
     func dateLabel(date: String) {
         dateLabel.text = date.formattedDate
     }
+
+
+    // MARK: - private methods
 
     private func setView() {
         contentView.backgroundColor = .clear
