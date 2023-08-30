@@ -35,6 +35,8 @@
 		8BC692F02A9FBE580096C00B /* SwipeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC692EF2A9FBE580096C00B /* SwipeNavigationController.swift */; };
 		8BC692F22A9FD3850096C00B /* CatalogViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC692F12A9FD3850096C00B /* CatalogViewPresenter.swift */; };
 		8BC692F42A9FD48D0096C00B /* CatalogViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC692F32A9FD48D0096C00B /* CatalogViewProtocol.swift */; };
+		8BC692F62A9FDDCA0096C00B /* CatalogsObjectViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC692F52A9FDDCA0096C00B /* CatalogsObjectViewPresenter.swift */; };
+		8BC692F82A9FDDE80096C00B /* CatalogsObjectViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC692F72A9FDDE80096C00B /* CatalogsObjectViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		8BC692EF2A9FBE580096C00B /* SwipeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeNavigationController.swift; sourceTree = "<group>"; };
 		8BC692F12A9FD3850096C00B /* CatalogViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewPresenter.swift; sourceTree = "<group>"; };
 		8BC692F32A9FD48D0096C00B /* CatalogViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewProtocol.swift; sourceTree = "<group>"; };
+		8BC692F52A9FDDCA0096C00B /* CatalogsObjectViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogsObjectViewPresenter.swift; sourceTree = "<group>"; };
+		8BC692F72A9FDDE80096C00B /* CatalogsObjectViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogsObjectViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +132,9 @@
 		8B57F7662A9F960400822ADB /* CatalogsObject */ = {
 			isa = PBXGroup;
 			children = (
+				8BC692F72A9FDDE80096C00B /* CatalogsObjectViewProtocol.swift */,
 				8B57F7672A9F962C00822ADB /* CatalogsObjectViewController.swift */,
+				8BC692F52A9FDDCA0096C00B /* CatalogsObjectViewPresenter.swift */,
 			);
 			path = CatalogsObject;
 			sourceTree = "<group>";
@@ -317,6 +323,7 @@
 				8BC118B72A9CF7A000ABE6C9 /* Constants.swift in Sources */,
 				8BC118BD2A9D048000ABE6C9 /* CatalogsObjectRequest.swift in Sources */,
 				8BC118AA2A9CB71200ABE6C9 /* CatalogsObjectModel.swift in Sources */,
+				8BC692F62A9FDDCA0096C00B /* CatalogsObjectViewPresenter.swift in Sources */,
 				8B57F7682A9F962C00822ADB /* CatalogsObjectViewController.swift in Sources */,
 				8B1C9AE02A9A83E700127D1F /* Fonts.swift in Sources */,
 				8BC692F02A9FBE580096C00B /* SwipeNavigationController.swift in Sources */,
@@ -334,6 +341,7 @@
 				8BC118A82A9CB4CC00ABE6C9 /* CatalogModel.swift in Sources */,
 				8BC692EE2A9FB9990096C00B /* Images.swift in Sources */,
 				8BC692F22A9FD3850096C00B /* CatalogViewPresenter.swift in Sources */,
+				8BC692F82A9FDDE80096C00B /* CatalogsObjectViewProtocol.swift in Sources */,
 				8BC118AE2A9CC04300ABE6C9 /* NetworkClient.swift in Sources */,
 				8BC141322A9F7C72000E26F3 /* UIBlockingProgressHUD.swift in Sources */,
 			);
