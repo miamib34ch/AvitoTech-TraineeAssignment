@@ -50,6 +50,13 @@ final class CatalogViewPresenter: CatalogViewPresenterProtocol {
         viewController?.configureCell(cell: cell, with: model)
     }
 
+    func viewDidTapCell(id: String) {
+        let catalogsObjectPresenter = CatalogsObjectViewPresenter(objectId: id)
+        let catalogsObjectViewController = CatalogsObjectViewController(presenter: catalogsObjectPresenter)
+        catalogsObjectPresenter.injectViewController(viewController: catalogsObjectViewController)
+        viewController?.showCatalogsObjectView(viewController: catalogsObjectViewController)
+    }
+
     private func updateViewCollection() {
         viewController?.removeHud()
         viewController?.updateCollection()

@@ -57,6 +57,10 @@ final class CatalogViewController: UIViewController, CatalogViewControllerProtoc
         cell.dateLabel(date: model.createdDate)
     }
 
+    func showCatalogsObjectView(viewController: CatalogsObjectViewController) {
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+
     private func configureCollection() {
         collectionView.backgroundColor = .clear
         collectionView.refreshControl = refreshControl
@@ -119,12 +123,8 @@ extension CatalogViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //tODO: Перенести в презентер
         guard let cell = collectionView.cellForItem(at: indexPath) as? CatalogCell,
               let id = cell.id else { return }
-        let catalogsObjectPresenter = CatalogsObjectViewPresenter(objectId: id)
-        let catalogsViewController = CatalogsObjectViewController(presenter: catalogsObjectPresenter)
-        catalogsObjectPresenter.injectViewController(viewController: catalogsViewController)
-        navigationController?.pushViewController(catalogsViewController, animated: true)
+        presenter.viewDidTapCell(id: id)
     }
 }

@@ -13,6 +13,7 @@ protocol CatalogViewPresenterProtocol {
     func viewDidLoad()
     func viewDidPullToRefresh()
     func viewWillConfigureCell(cell: CatalogCell, with indexPath: IndexPath)
+    func viewDidTapCell(id: String)
 }
 
 protocol CatalogViewControllerProtocol: AnyObject {
@@ -21,4 +22,5 @@ protocol CatalogViewControllerProtocol: AnyObject {
     func showHud()
     func removeHud()
     func configureCell(cell: CatalogCell, with model: Advertisement)
+    func showCatalogsObjectView(viewController: CatalogsObjectViewController)
 }
