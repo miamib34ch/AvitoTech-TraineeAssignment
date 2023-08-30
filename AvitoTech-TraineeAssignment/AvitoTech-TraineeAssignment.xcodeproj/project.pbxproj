@@ -31,6 +31,8 @@
 		8BC141302A9F7C62000E26F3 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 8BC1412F2A9F7C62000E26F3 /* ProgressHUD */; };
 		8BC141322A9F7C72000E26F3 /* UIBlockingProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC141312A9F7C72000E26F3 /* UIBlockingProgressHUD.swift */; };
 		8BC141342A9F8943000E26F3 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC141332A9F8943000E26F3 /* String+Extension.swift */; };
+		8BC692EE2A9FB9990096C00B /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC692ED2A9FB9990096C00B /* Images.swift */; };
+		8BC692F02A9FBE580096C00B /* SwipeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC692EF2A9FBE580096C00B /* SwipeNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		8BC141292A9E6F4E000E26F3 /* CatalogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCell.swift; sourceTree = "<group>"; };
 		8BC141312A9F7C72000E26F3 /* UIBlockingProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBlockingProgressHUD.swift; sourceTree = "<group>"; };
 		8BC141332A9F8943000E26F3 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		8BC692ED2A9FB9990096C00B /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		8BC692EF2A9FBE580096C00B /* SwipeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 				8B1C9ADD2A9A83BF00127D1F /* Localizable.strings */,
 				8B1C9AC82A9A7D0C00127D1F /* Assets.xcassets */,
 				8B1C9ADF2A9A83E700127D1F /* Fonts.swift */,
+				8BC692ED2A9FB9990096C00B /* Images.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 				8BC141272A9E6EBD000E26F3 /* CellsReusingUtils.swift */,
 				8BC141312A9F7C72000E26F3 /* UIBlockingProgressHUD.swift */,
 				8BC141332A9F8943000E26F3 /* String+Extension.swift */,
+				8BC692EF2A9FBE580096C00B /* SwipeNavigationController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -307,6 +313,7 @@
 				8BC118AA2A9CB71200ABE6C9 /* CatalogsObjectModel.swift in Sources */,
 				8B57F7682A9F962C00822ADB /* CatalogsObjectViewController.swift in Sources */,
 				8B1C9AE02A9A83E700127D1F /* Fonts.swift in Sources */,
+				8BC692F02A9FBE580096C00B /* SwipeNavigationController.swift in Sources */,
 				8BC141282A9E6EBD000E26F3 /* CellsReusingUtils.swift in Sources */,
 				8B1C9AC42A9A7D0B00127D1F /* CatalogViewController.swift in Sources */,
 				8BC1412A2A9E6F4E000E26F3 /* CatalogCell.swift in Sources */,
@@ -318,6 +325,7 @@
 				8BC118B92A9CF8EA00ABE6C9 /* CatalogNetworkService.swift in Sources */,
 				8BC118B52A9CF71C00ABE6C9 /* CatalogRequest.swift in Sources */,
 				8BC118A82A9CB4CC00ABE6C9 /* CatalogModel.swift in Sources */,
+				8BC692EE2A9FB9990096C00B /* Images.swift in Sources */,
 				8BC118AE2A9CC04300ABE6C9 /* NetworkClient.swift in Sources */,
 				8BC141322A9F7C72000E26F3 /* UIBlockingProgressHUD.swift in Sources */,
 			);

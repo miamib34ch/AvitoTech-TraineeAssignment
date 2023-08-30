@@ -10,3 +10,5 @@ alert.title = "Error";
 alert.message = "An error occurred while loading data. Please try again.";
 alert.action.again = "Retry";
 alert.action.leave = "Leave";
+call = "Call";
+mail = "Mail";

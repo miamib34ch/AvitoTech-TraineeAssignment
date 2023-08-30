@@ -10,3 +10,5 @@ alert.title = "Ошибка";
 alert.message = "При загрузке данных произошла ошибка. Повторите запрос.";
 alert.action.again = "Повторить";
 alert.action.leave = "Выйти";
+call = "Позвонить";
+mail = "Написать";

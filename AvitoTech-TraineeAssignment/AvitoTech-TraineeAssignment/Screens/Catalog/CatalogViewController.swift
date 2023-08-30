@@ -87,7 +87,7 @@ class CatalogViewController: UIViewController {
         catalogNetworkService.fetch()
     }
 
-    @objc func pullToRefresh() {
+    @objc private func pullToRefresh() {
         refreshControl.endRefreshing()
         loadData()
     }
