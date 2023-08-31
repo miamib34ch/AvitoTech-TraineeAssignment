@@ -36,26 +36,26 @@
 ## Инструкция по запуску
 Для запуска потребуется [Xcode](https://developer.apple.com/xcode/)
 1. Скачайте архив *main ветки* или *релиз* из github:  
-   1.1 Скачивание main ветки:  
+   1.1 Скачивание *main ветки*:  
    <img width="1183" alt="image" src="https://github.com/miamib34ch/AvitoTech-TraineeAssignment/assets/77894393/cb66b57b-de02-4448-b031-5ed5fc2a37d5">
-   1.2 Скачивание релиза:  
+   1.2 Скачивание *релиза*:  
    <img width="1183" alt="image" src="https://github.com/miamib34ch/AvitoTech-TraineeAssignment/assets/77894393/d239a0a3-9c54-4d9d-aedd-9aa3c1aa180c">
    <img width="1183" alt="image" src="https://github.com/miamib34ch/AvitoTech-TraineeAssignment/assets/77894393/7210d8c6-022f-4fcf-a1f2-c64ad9f728ea">  
 2. Распакуйте архив и запустите проект:  
    2.1 Зайдите в распакованную папку:  
    <img width="683" alt="image" src="https://github.com/miamib34ch/AvitoTech-TraineeAssignment/assets/77894393/7c09eb11-813c-42e6-967b-8ffa7528ab39">  
-   2.2 Зайдите в папку AvitoTech-TraineeAssignment:  
+   2.2 Зайдите в папку *AvitoTech-TraineeAssignment*:  
    <img width="683" alt="image" src="https://github.com/miamib34ch/AvitoTech-TraineeAssignment/assets/77894393/35943743-be71-421e-b02b-5a596de3696b">  
-   2.3 Откройте файл AvitoTech-TraineeAssignment.xcodeproj:  
+   2.3 Откройте файл *AvitoTech-TraineeAssignment.xcodeproj*:  
    <img width="683" alt="image" src="https://github.com/miamib34ch/AvitoTech-TraineeAssignment/assets/77894393/7bad7bc7-d3bf-44ad-a7f5-0a9bff6542fd">  
-   2.4 Появится окно, в котором нужно нажать "Trust and Open":  
+   2.4 Появится окно, в котором нужно нажать *Trust and Open*:  
    <img width="248" alt="image" src="https://github.com/miamib34ch/AvitoTech-TraineeAssignment/assets/77894393/f1abbe1a-1357-486f-860e-5b937df5d8cf">
-3. В Xcode запустите приложение на симуляторе или на реальном устройстве. Приложение работает, начиная с iOS 14.0, поддерживает только iPhone. [Статья про запуск на симуляторе и на реальном устройстве](Запуск приложения в эмуляторе iOS)
+3. В Xcode запустите приложение на симуляторе или на реальном устройстве. Приложение работает, начиная с iOS 14.0, поддерживает только iPhone. [Статья про запуск на симуляторе и на реальном устройстве](https://2compa.ru/programmirovanie/xcode-and-swift/xcode-uroki-urok-5-zapusk-mobilnogo-prilozhenija-dlja-ios/?utm_referrer=)
 
 ## Комментарий по работе
 1. По тз не было запрещено использовать внешние зависимости, поэтому использовал две:  
-    1.1 ProgressHud - для индикатора загрузки экрана.  
-    1.2 Kongfisher - для загрузки картинок из сети. Библиотека работает c URLSession (всё по тз).  
+    1.1 *ProgressHud* - для индикатора загрузки экрана.  
+    1.2 *Kingfisher* - для загрузки картинок из сети. Библиотека работает c *URLSession* (всё по тз).  
 2. В приложении реализована тёмная и светлая тема.
 3. В приложении реализована русская и английская локализация, зависит от системного языка устройства, базовый русский.
 4. Реализован свайп влево для выхода с экрана детальной информации.
@@ -63,4 +63,4 @@
 6. Приложение сохраняет кэш, и если уже был загружен каталог или детальный экран, то они будут показаны даже при отсутствии интернета. Поэтому если нужно посмотреть на алерт с ошибкой загрузки экрана каталога, то нужно удалить приложение, выключить интернет и запустить заново. Для экрана с детальной информацией достаточно открыть без интернета тот, который раннее не был загружен.
 7. После включения интернета карте нужно какое-то время, чтобы заново начать работать.
 8. Если указанного в объявлении адреса в городе не существует, то на карте показывается просто город.
-9. В работе использован swiftlint, но его скрипт закомментирован, чтобы могли запустить те, у кого он не установлен.
+9. В работе использован *swiftlint*, но его скрипт закомментирован, чтобы могли запустить те, у кого он не установлен.
