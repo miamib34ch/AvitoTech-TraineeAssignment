@@ -50,7 +50,7 @@
    <img width="683" alt="image" src="https://github.com/miamib34ch/AvitoTech-TraineeAssignment/assets/77894393/7bad7bc7-d3bf-44ad-a7f5-0a9bff6542fd">  
    2.4 Появится окно, в котором нужно нажать *Trust and Open*:  
    <img width="248" alt="image" src="https://github.com/miamib34ch/AvitoTech-TraineeAssignment/assets/77894393/f1abbe1a-1357-486f-860e-5b937df5d8cf">
-3. В Xcode запустите приложение на симуляторе или на реальном устройстве. Приложение работает, начиная с iOS 14.0, поддерживает только iPhone.
+3. В Xcode запустите приложение на симуляторе или на реальном устройстве. Приложение работает, начиная с iOS 14.0, поддерживает только iPhone. 
 
 ## Комментарий по работе
 1. По тз не было запрещено использовать внешние зависимости, поэтому использовал две:  
